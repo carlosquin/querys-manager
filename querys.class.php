@@ -177,7 +177,7 @@ class Querys
 					$i = 1;
 					foreach ($w as $key => $value) {
 						$y = explode("=",$value);
-						$wheres .= $x[0]."='".$x[1]."'";
+						$wheres .= $y[0]."='".$y[1]."'";
 						if($i<count($c)){
 							$wheres .= self::ANDWHERE;
 						}
@@ -187,7 +187,7 @@ class Querys
 				}else{
 					$wheres = "";
 					$y = explode("=",$where);
-					$wheres = $x[0]."='".$x[1]."'";
+					$wheres = $y[0]."='".$y[1]."'";
 				}
 
 			$a = $this->con->query(self::UPDATE . $table . self::SET . $fields . self::WHERE . $wheres);
