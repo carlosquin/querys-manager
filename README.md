@@ -31,4 +31,22 @@ This library helps you write more readable code by interpreting faster the reque
 						)
 					);</code>
 <br>
+<b>selectWhere:</b><br>
+<code>$sql->selectWhere(
+					array(
+						'table' => 'table name here',
+						'select' => 'Field and value',
+						'where' => 'Field and value'
+						)
+					);</code><br>
+          
+<b>Example selectWhere:</b><br>
+<code>$sql->selectWhere(
+					array(
+						'table' => 'customers',
+						'select' => 'id, name, lastname, ',
+						'where' => 'id=10'
+						)
+					);</code>
+<br>
 #Coming further changes
