@@ -93,7 +93,7 @@ class Querys
 			if(!$table || !$field || !$select){
 				throw new Exception("Data is missing for consultation", 1);
 			}
-			$fields = explode(",",$fields);
+			$fields = explode(",",$field);
 			$c = count($fields);
 				if($c>1){
 					$where = "";
