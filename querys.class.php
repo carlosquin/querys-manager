@@ -129,10 +129,6 @@ class Querys
 		}
 	}//end
 
-	function selectSum(){
-		//In process of creation
-	}//end
-
 	function update($X){
 		$table = array_key_exists('table', $X) ? $X['table'] : false;
 		$field = array_key_exists('field', $X) ? $X['field'] : false;
@@ -324,14 +320,6 @@ class Querys
 			$this->error($e->getMessage().' Line:'.$e->getLine());
 			return false;
 		}
-	}//end
-
-	function count(){
-		//In process of Creation
-	}//end
-
-	function limit(){
-		//In process of Creation
 	}//end
 
 }//end Class
