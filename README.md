@@ -31,6 +31,7 @@ This library helps you write more readable code by interpreting faster the reque
 						)
 					);</code>
 <br>
+<p>The where node of the array supports the inclusion of multiple fields with their values separated by commas, for example: id = 10, name = jhon</p><br>
 <hr>
 <b>selectWhere:</b><br>
 <code>$sql->selectWhere(
@@ -50,4 +51,5 @@ This library helps you write more readable code by interpreting faster the reque
 						)
 					);</code>
 <br>
+<p>The where node of the array supports the inclusion of multiple fields with their values separated by commas, for example: id = 10, name = jhon</p><br>
 #Coming further changes
