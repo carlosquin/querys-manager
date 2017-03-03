@@ -3,6 +3,7 @@
 Author: Carlos Quintero
 Email: info.fxstudios@gmail.com
 HITCEL Corporation
+	Valencia - Venezuela
 */
 class Querys
 {
