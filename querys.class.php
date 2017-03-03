@@ -57,7 +57,7 @@ class Querys
 	//Function is used to make a select without wildcards
 	function select($X){
 		$field = (array_key_exists('field', $X) && !empty($X['field'])) ? $X['field'] : '*';
-		$table = array_key_exists('table', $X) ? $X['table'] : false;
+		$table = (array_key_exists('table', $X)) ? $X['table'] : false;
 
 		$this->con->commit(false);
 
