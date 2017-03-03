@@ -136,7 +136,7 @@ class Querys
 	function update($X){
 		$table = array_key_exists('table', $X) ? $X['table'] : false;
 		$field = array_key_exists('field', $X) ? $X['field'] : false;
-		$where = array_key_exists('where', $X) ? explode("=",$X['where']) : false;
+		$where = array_key_exists('where', $X) ? $X['where'] : false;
 
 
 		$this->con->commit(false);
@@ -170,8 +170,27 @@ class Querys
 					$x = explode("=",$field);
 					$fields = $x[0]."='".$x[1]."'";
 				}
+			
+			$w = explode(",",$where);
+				if(count($w)>1){
+					$wheres = "";
+					$i = 1;
+					foreach ($w as $key => $value) {
+						$y = explode("=",$value);
+						$wheres .= $x[0]."='".$x[1]."'";
+						if($i<count($c)){
+							$wheres .= self::ANDWHERE;
+						}
+						$i++;
+					}
 
-			$a = $this->con->query(self::UPDATE . $table . self::SET . $fields . self::WHERE . $where[0] ."=" . "'" . $where[1] . "'");
+				}else{
+					$wheres = "";
+					$y = explode("=",$where);
+					$wheres = $x[0]."='".$x[1]."'";
+				}
+
+			$a = $this->con->query(self::UPDATE . $table . self::SET . $fields . self::WHERE . $wheres);
 
 			if(!$a){
 				throw new Exception($this->con->error, 1);
