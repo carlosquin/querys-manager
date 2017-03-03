@@ -52,4 +52,24 @@ This library helps you write more readable code by interpreting faster the reque
 					);</code>
 <br>
 <p>The where node of the array supports the inclusion of multiple fields with their values separated by commas, for example: id = 10, name = jhon</p><br>
+
+<hr>
+<b>delete:</b><br>
+<code>$sql->delete(
+					array(
+						'table' => 'table name here',
+						'where' => 'Fields and values'
+						)
+					);</code><br>
+          
+<b>Example delete:</b><br>
+<code>$sql->delete(
+					array(
+						'table' => 'customers',
+						'where' => 'id=10,name=jhon'
+						)
+					);</code>
+<br>
+<p>The where node of the array supports the inclusion of multiple fields with their values separated by commas, for example: id = 10, name = jhon</p><br>
+
 #Coming further changes
