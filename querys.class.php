@@ -178,7 +178,7 @@ class Querys
 					foreach ($w as $key => $value) {
 						$y = explode("=",$value);
 						$wheres .= $y[0]."='".$y[1]."'";
-						if($i<count($c)){
+						if($i<count($w)){
 							$wheres .= self::ANDWHERE;
 						}
 						$i++;
