@@ -221,7 +221,26 @@ class Querys
 				throw new Exception("Control where field is not specified", 1);
 			}
 
-			$a = $this->con->query(self::DELETE . self::FROM . $table . self::WHERE . $where[0] ."=" . "'" . $where[1] . "'");
+			$d = explode(",",$where);
+				if(count($w)>1){
+					$wheres = "";
+					$i = 1;
+					foreach ($d as $key => $value) {
+						$y = explode("=",$value);
+						$wheres .= $x[0]."='".$x[1]."'";
+						if($i<count($c)){
+							$wheres .= self::ANDWHERE;
+						}
+						$i++;
+					}
+
+				}else{
+					$wheres = "";
+					$y = explode("=",$where);
+					$wheres = $x[0]."='".$x[1]."'";
+				}
+
+			$a = $this->con->query(self::DELETE . self::FROM . $table . self::WHERE . $wheres);
 
 			if(!$a){
 				throw new Exception($this->con->error, 1);
