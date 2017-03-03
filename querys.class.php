@@ -90,7 +90,7 @@ class Querys
 		$this->con->commit(false);
 
 		try{
-			if(!$table || !$field !$select){
+			if(!$table || !$field || !$select){
 				throw new Exception("Data is missing for consultation", 1);
 			}
 			$fields = explode(",",$fields);
