@@ -33,7 +33,7 @@ class Querys
 	{
 		$this->con = new MySQLi($host, $user, $pass, $base);
 		if($db->connect_error) {
-			die('Error de conexion ('.$db->connect_errno.')'
+			die('Conection error ('.$db->connect_errno.')'
 				.$db->connect_errno);
 		};
 	}//
