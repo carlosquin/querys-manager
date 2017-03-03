@@ -31,6 +31,7 @@ This library helps you write more readable code by interpreting faster the reque
 						)
 					);</code>
 <br>
+<hr>
 <b>selectWhere:</b><br>
 <code>$sql->selectWhere(
 					array(
