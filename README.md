@@ -6,7 +6,7 @@ This library helps you write more readable code by interpreting faster the reque
 
 # Use:
 <p>Initialize class:</p><br>
-<b>$sql = new Querys();</b><br><br>
+<code>$sql = new Querys();</code><br><br>
 <b>Select:</b><br>
 <code>$sql->select(array(table'=>'table name here','field'=>'fields name to select here (comma separated)'));</code><br>
 <b>Example Select:</b><br>
